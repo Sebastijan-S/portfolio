@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sebastian   Creative Technologist</title>
+<meta name="description" content="Sebastian is a creative technologist building elegant websites, design systems, and AI-enabled digital products.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -15,12 +16,25 @@
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">Sebastian</a>
+  <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
   <ul class="nav-links">
     <li><a href="#work">Work</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
+<div class="mobile-nav" aria-hidden="true">
+  <button class="mobile-nav-close" aria-label="Close menu">×</button>
+  <ul class="mobile-nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
 
 <!-- HERO -->
 <div class="hero">
@@ -37,12 +51,7 @@
   <div class="hero-visual">
     <div class="blob-wrap">
       <div class="profile-placeholder">
-        <!-- Clean human silhouette SVG -->
-        <svg viewBox="0 0 200 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="100" cy="62" rx="38" ry="42" fill="#FAF9F7" opacity="0.8"/>
-          <path d="M28 230 C28 175 172 175 172 230" fill="#FAF9F7" opacity="0.8"/>
-          <ellipse cx="100" cy="60" rx="32" ry="36" fill="#1A1814" opacity="0.18"/>
-        </svg>
+        <img src="images/profile-picture.jpg" alt="Sebastian profile" />
       </div>
     </div>
   </div>
@@ -74,91 +83,66 @@
   </div>
   <h2 class="reveal">Projects I'm <em>proud of</em></h2>
 
-  <div class="work-grid" style="margin-top:3rem;">
-    <div class="work-card large reveal">
+  <div class="work-grid">
+    <div class="work-card reveal"
+         data-role="Lead Web Designer & Developer"
+         data-timeline="3–4 weeks"
+         data-deliverables="Visual Identity, Responsive Codebase, Component Library"
+         data-challenge="The agency needed a high-converting, visually striking platform to showcase their dual design/dev capabilities and attract small business owners who are overwhelmed by tech."
+         data-solution="Built a sleek, modern landing page with a highly interactive portfolio section and clear service funnels, translating complex tech jargon into clear business value."
+         data-result="Delivered a fast-loading, highly polished digital storefront that successfully positions the agency as an elite, premium partner for small businesses."
+         data-image="images/case1.png">
       <div class="card-thumb">
-        <div class="card-thumb-inner thumb-1">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-            <rect x="10" y="10" width="25" height="25" rx="3" fill="#8A857E" opacity="0.4"/>
-            <rect x="45" y="10" width="25" height="25" rx="3" fill="#7D9B8A" opacity="0.5"/>
-            <rect x="10" y="45" width="25" height="25" rx="3" fill="#7D9B8A" opacity="0.3"/>
-            <rect x="45" y="45" width="25" height="25" rx="3" fill="#C4B9A8" opacity="0.6"/>
-          </svg>
+        <div class="card-thumb-inner">
+          <img src="images/thumbnail1.png" alt="SN Ingenia thumbnail" />
         </div>
       </div>
       <div class="card-body">
-        <span class="card-tag">Product design · Engineering</span>
-        <div class="card-title">Meridian   AI-powered project OS</div>
-        <p class="card-desc">End-to-end design and implementation of a workflow tool used by 12,000+ creative teams. Reduced onboarding drop-off by 40%.</p>
+        <span class="card-tag">UI/UX Design · Front-End Development · B2B Web Design</span>
+        <div class="card-title">SN Ingenia</div>
+        <p class="card-desc">A high-end agency website built for a digital studio providing end-to-end design and development solutions for small businesses.</p>
         <a href="#" class="card-link">View case study →</a>
       </div>
     </div>
 
-    <div class="work-card medium reveal">
+    <div class="work-card reveal"
+         data-role="Front-End UI Developer & Brand Layout Designer"
+         data-timeline="4 weeks"
+         data-deliverables="Interactive Floor Plans, Visual System, Deployment"
+         data-challenge="The client needed a localized yet world-class web presence to market brand-new residential buildings constructed from scratch, requiring a balance of premium aesthetics and heavy visual media."
+         data-solution="Designed a clean, sophisticated, content-first layout utilizing optimized image arrays to highlight architectural details, structural quality, and modern floor plans."
+         data-result="A fast, beautifully rendered local real estate platform that elevates the brand above standard regional listings and drives direct buyer inquiries."
+         data-image="images/case2.png">
       <div class="card-thumb">
-        <div class="card-thumb-inner thumb-2">
-          <svg width="70" height="70" viewBox="0 0 70 70" fill="none">
-            <circle cx="35" cy="35" r="28" stroke="#7D9B8A" stroke-width="2" opacity="0.5"/>
-            <circle cx="35" cy="35" r="18" fill="#7D9B8A" opacity="0.2"/>
-            <circle cx="35" cy="35" r="8" fill="#7D9B8A" opacity="0.6"/>
-          </svg>
+        <div class="card-thumb-inner">
+          <img src="images/thumbnail2.png" alt="Smart Residences thumbnail" />
         </div>
       </div>
       <div class="card-body">
-        <span class="card-tag">Branding · Motion</span>
-        <div class="card-title">Forma Studio identity system</div>
-        <p class="card-desc">Visual identity and motion language for an architecture collective spanning print, digital, and wayfinding.</p>
+        <span class="card-tag">Real Estate Web Design · Premium Branding · Architecture Showcases</span>
+        <div class="card-title">Smart Residences</div>
+        <p class="card-desc">A premium, minimalist showcase website for a luxury construction and residential development firm operating in Zrenjanin, Serbia.</p>
         <a href="#" class="card-link">View case study →</a>
       </div>
     </div>
 
-    <div class="work-card third reveal">
+    <div class="work-card reveal"
+         data-role="Full-Stack Developer & Product Designer"
+         data-timeline="6–8 weeks"
+         data-deliverables="Application Architecture, Dashboard UI, Database Integration"
+         data-challenge="Small business owners struggle to track fragmented operational data, switching between messy spreadsheets for bills, worker hours, and overhead costs."
+         data-solution="Engineered a centralized SaaS dashboard with a unified database structure, clean UI data-tables for real-time tracking, and simple input pipelines for quick daily updates."
+         data-result="Transformed a standard informational layout into a highly functional web utility app, significantly reducing administrative overhead and data friction for active businesses."
+         data-image="images/case3.png">
       <div class="card-thumb">
-        <div class="card-thumb-inner thumb-3">
-          <svg width="65" height="65" viewBox="0 0 65 65" fill="none">
-            <path d="M10 55 L32 10 L54 55 Z" stroke="#C4B9A8" stroke-width="2" fill="none" opacity="0.5"/>
-            <path d="M18 43 L32 18 L46 43 Z" fill="#E8C87A" opacity="0.35"/>
-          </svg>
+        <div class="card-thumb-inner">
+          <img src="images/thumbnail3.png" alt="Tracker thumbnail" />
         </div>
       </div>
       <div class="card-body">
-        <span class="card-tag">Data viz · React</span>
-        <div class="card-title">Pulse analytics dashboard</div>
-        <p class="card-desc">Real-time data visualisation for a fintech startup. Custom D3 renderer with 60fps performance targets.</p>
-        <a href="#" class="card-link">View case study →</a>
-      </div>
-    </div>
-
-    <div class="work-card third reveal">
-      <div class="card-thumb">
-        <div class="card-thumb-inner thumb-4">
-          <svg width="65" height="65" viewBox="0 0 65 65" fill="none">
-            <rect x="8" y="8" width="49" height="49" rx="8" stroke="#b5a8d4" stroke-width="2" fill="none" opacity="0.5"/>
-            <path d="M20 32 H45 M32 20 V45" stroke="#b5a8d4" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
-          </svg>
-        </div>
-      </div>
-      <div class="card-body">
-        <span class="card-tag">iOS · Swift</span>
-        <div class="card-title">Hue   color palette tool</div>
-        <p class="card-desc">Native iPhone app for designers to capture, generate, and export accessible color palettes.</p>
-        <a href="#" class="card-link">View case study →</a>
-      </div>
-    </div>
-
-    <div class="work-card third reveal">
-      <div class="card-thumb">
-        <div class="card-thumb-inner thumb-5">
-          <svg width="65" height="65" viewBox="0 0 65 65" fill="none">
-            <path d="M12 42 Q20 20 32 30 Q44 40 52 18" stroke="#d4a8a8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <circle cx="32" cy="30" r="4" fill="#d4a8a8" opacity="0.5"/>
-          </svg>
-        </div>
-      </div>
-      <div class="card-body">
-        <span class="card-tag">Generative · Three.js</span>
-        <div class="card-title">Terrain generative art series</div>
-        <p class="card-desc">An ongoing series of procedural landscapes   exhibited at SF Digital Arts Fest 2024.</p>
+        <span class="card-tag">Full-Stack Web App · Dashboard Design · Business Operations</span>
+        <div class="card-title">Tracker</div>
+        <p class="card-desc">A powerful, streamlined B2B web application designed to track internal business expenses, employee management, and operational bills.</p>
         <a href="#" class="card-link">View case study →</a>
       </div>
     </div>
@@ -194,7 +178,7 @@
         </div>
       </div>
       <div class="modal-visual">
-        <div class="visual-placeholder">High-quality visual/image showcase placeholder</div>
+        <img id="modalImage" src="images/case1.png" alt="Case study image" />
       </div>
       <div class="modal-result">
         <h3>The Result</h3>
@@ -205,8 +189,8 @@
 </div>
 
 <!-- ABOUT / SKILLS -->
-<section id="about" style="background: var(--card-bg); max-width: none; padding: 6rem 5vw;">
-  <div style="max-width:1280px; margin:0 auto;">
+<section id="about" class="about-section">
+  <div class="about-inner">
     <div class="section-header reveal">
       <span class="section-label">About me</span>
       <div class="section-rule"></div>
@@ -282,6 +266,21 @@
         </div>
       </div>
     </div>
+    <form class="contact-form" id="contactForm" action="mailto:sekosansebastijan@gmail.com" method="post" enctype="text/plain">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@email.com" required>
+      </div>
+      <div class="form-row">
+        <label for="message">Project brief</label>
+        <textarea id="message" name="message" rows="5" placeholder="Short summary of your project"></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Send message</button>
+    </form>
   </div>
 </div>
 
